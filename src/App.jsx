@@ -1,10 +1,11 @@
-import React from "react";
+
 import Hero from "./Sections/Hero";
 import ShowcaseSaection from "./Sections/ShowcaseSaection";
 import Navbar from "./Components/Navbar";
 import LogoSection from "./Sections/LogoSection";
 import FeatureCards from "./Sections/FeatureCards";
 import ExperienceSection from "./Sections/ExperienceSection";
+import TechStack from "./Sections/TechStack";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <LogoSection/>
       <FeatureCards/>
       <ExperienceSection/>
+      <TechStack/>
     </>
   );
 };
