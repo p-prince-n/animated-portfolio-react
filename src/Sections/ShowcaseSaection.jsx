@@ -48,16 +48,16 @@ const ShowcaseSaection = () => {
         <div className="showcaselayout">
           {/* Left  */}
           <div className="first-project-wrapper" ref={project1Ref}>
-            <div className="image-wrapper">
-              <img src="/images/project1.png" alt="project1" className="" />
+            <div className="image-wrapper bg-black">
+              <img src="/images/project1.png" alt="project1" className="object-fill px-5 md:px-10 xl:px-20" />
             </div>
             <div className="text-content">
               <h2>
-                On-demand Rides Made Simple with a Powerful, User-Friendly App
-                Ryde
+                <span>ShopNova</span> a futurstic e-commerce website, with AI facility and Spin a well to get a discount Coupon.
+
               </h2>
               <p className="text-white-50 md:text-xl">
-                An app built with React Native Expo & TaileindCSS for a fast,
+                An app built with MERN & TaileindCSS for a fast,
                 user-friendly experience
               </p>
             </div>
