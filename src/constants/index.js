@@ -262,6 +262,49 @@ const socialImgs = [
     imgPath: "/images/linkedin.png",
   },
 ];
+const showProjectOverView=[
+  {
+    id: 1,
+    imagePath: '/images/project1.png',
+    title: "ShopNova",
+    shortDesc: "a futurstic e-commerce website, with AI facility and Spin a well to get a discount Coupon.",
+    desc: " An app built with MERN & TaileindCSS for a fast, user-friendly experience"
+
+  },
+  {
+    id: 2,
+    imagePath: '/images/project1.png',
+    title: "ShopNova",
+    shortDesc: "a futurstic e-commerce website, with AI facility and Spin a well to get a discount Coupon.",
+    desc: " An app built with MERN & TaileindCSS for a fast, user-friendly experience"
+
+  },
+  {
+    id: 3,
+    imagePath: '/images/project1.png',
+    title: "ShopNova",
+    shortDesc: "a futurstic e-commerce website, with AI facility and Spin a well to get a discount Coupon.",
+    desc: " An app built with MERN & TaileindCSS for a fast, user-friendly experience"
+
+  },
+  {
+    id: 4,
+    imagePath: '/images/project1.png',
+    title: "ShopNova",
+    shortDesc: "a futurstic e-commerce website, with AI facility and Spin a well to get a discount Coupon.",
+    desc: " An app built with MERN & TaileindCSS for a fast, user-friendly experience"
+
+  },
+  {
+    id: 5,
+    imagePath: '/images/project1.png',
+    title: "ShopNova",
+    shortDesc: "a futurstic e-commerce website, with AI facility and Spin a well to get a discount Coupon.",
+    desc: " An app built with MERN & TaileindCSS for a fast, user-friendly experience"
+
+  }
+
+]
 
 export {
   words,
@@ -275,4 +318,5 @@ export {
   techStackIcons,
   techStackImgs,
   navLinks,
+  showProjectOverView,
 };
