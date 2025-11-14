@@ -134,8 +134,8 @@ const techStackIcons = [
   {
     name: "Flutter Developer",
     modelPath: "/models/Flutter.glb",
-    scale: 0.05,
-    rotation: [0, 5, 0],
+    scale: 40,
+    rotation: [0, 0, 0],
   },
   {
     name: "Project Manager",
