@@ -29,10 +29,10 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 13, suffix: "+", label: "OverAll Projects" },
+  { value: 6, suffix: "+", label: "MERN Stack project" },
+  { value: 5, suffix: "+", label: "Flutter Projects" },
+  { value: 1, suffix: "", label: "NEXTjs/Django Project" }
 ];
 
 const logoIconsList = [
@@ -132,10 +132,10 @@ const techStackIcons = [
     rotation: [0, -Math.PI / 2, 0],
   },
   {
-    name: "Interactive Developer",
-    modelPath: "/models/three.js-transformed.glb",
+    name: "Flutter Developer",
+    modelPath: "/models/Flutter.glb",
     scale: 0.05,
-    rotation: [0, 0, 0],
+    rotation: [0, 5, 0],
   },
   {
     name: "Project Manager",
@@ -262,49 +262,58 @@ const socialImgs = [
     imgPath: "/images/linkedin.png",
   },
 ];
-const showProjectOverView=[
+const showProjectOverView = [
   {
     id: 1,
-    imagePath: '/images/project1.png',
+    imagePath: "/images/projectimages/shopnova.png",
     title: "ShopNova",
-    shortDesc: "a futurstic e-commerce website, with AI facility and Spin a well to get a discount Coupon.",
-    desc: " An app built with MERN & TaileindCSS for a fast, user-friendly experience"
-
+    shortDesc:
+      "A futurstic e-commerce website, with AI facility and Spin a well to get a discount Coupon.",
+    desc: "An app built with MERN & TailwindCSS for a fast, user-friendly experience",
   },
   {
     id: 2,
-    imagePath: '/images/project1.png',
-    title: "ShopNova",
-    shortDesc: "a futurstic e-commerce website, with AI facility and Spin a well to get a discount Coupon.",
-    desc: " An app built with MERN & TaileindCSS for a fast, user-friendly experience"
-
+    imagePath: "/images/projectimages/talkspace.png",
+    title: "TalkSpace",
+    shortDesc: "A Realtime Chat App with MERN Stack, one to one communication with mobile responsive.",
+    desc: "A Chat website build with MERN Stack with TailwindCSS, user friendly ",
   },
   {
     id: 3,
-    imagePath: '/images/project1.png',
-    title: "ShopNova",
-    shortDesc: "a futurstic e-commerce website, with AI facility and Spin a well to get a discount Coupon.",
-    desc: " An app built with MERN & TaileindCSS for a fast, user-friendly experience"
-
+    imagePath: "/images/projectimages/chattrix.png",
+    title: "Chattrix",
+    shortDesc: "A Realtime Chat web app build with MERN Stack and TailwindCSS. One-to-One also One-to-Many communication .",
+    desc: "Modern UI with React + Socket + TailwindCSS ad user-friendly",
   },
   {
     id: 4,
-    imagePath: '/images/project1.png',
-    title: "ShopNova",
-    shortDesc: "a futurstic e-commerce website, with AI facility and Spin a well to get a discount Coupon.",
-    desc: " An app built with MERN & TaileindCSS for a fast, user-friendly experience"
-
+    imagePath: "/images/projectimages/codecraftsblog.png",
+    title: "CodeCraft's Blog",
+    shortDesc: "A Blog web app, build with modern technology user-friendly and easy to use ",
+    desc: "Modern UI build with flow-bite react with CRUD operation done by Admin",
   },
   {
     id: 5,
-    imagePath: '/images/project1.png',
-    title: "ShopNova",
-    shortDesc: "a futurstic e-commerce website, with AI facility and Spin a well to get a discount Coupon.",
-    desc: " An app built with MERN & TaileindCSS for a fast, user-friendly experience"
-
-  }
-
-]
+    imagePath: "/images/projectimages/amazonclone.jpg",
+    title: "Amazon Clone",
+    shortDesc: "An E-commerce application build with flutter and expressjs and mongoDB with Admin panel.",
+    desc: "Clone Application of 'Amazon' build with flutter which is platform independent with proper Authentication also uses a Provider easy to manage state",
+  },
+  {
+    id: 6,
+    imagePath: "/images/projectimages/voiceassistant.jpg",
+    title: "Voice Assistant",
+    shortDesc: "A voice assistant build with flutter and Gemini",
+    desc: "A flutter application to understand how gemini api work using flutter_gemini package.",
+  },
+  {
+    id: 7,
+    imagePath: "/images/projectimages/weatherapp.jpg",
+    title: "Weather App",
+    shortDesc: "A Weather application build with flutter to Understand how Futurebuilder widget works ",
+    desc: "A flutter application to understand how Futurebuilder widget works also uses openweathermap's free api to get current weather details.",
+  },
+];
 
 export {
   words,

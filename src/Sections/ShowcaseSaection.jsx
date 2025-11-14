@@ -2,47 +2,9 @@ import React, { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { showProjectOverView } from "../constants";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const showProjectOverView = [
-  {
-    id: 1,
-    imagePath: "/images/project1.png",
-    title: "ShopNova",
-    shortDesc:
-      "a futurstic e-commerce website, with AI facility and Spin a well to get a discount Coupon.",
-    desc: "An app built with MERN & TailwindCSS for a fast, user-friendly experience",
-  },
-  {
-    id: 2,
-    imagePath: "/images/project2.png",
-    title: "Library Management System",
-    shortDesc: "A complete LMS dashboard and book management.",
-    desc: "Built using MERN, Admin panel, charts & CRUD.",
-  },
-  {
-    id: 3,
-    imagePath: "/images/project3.png",
-    title: "YC Directory",
-    shortDesc: "Startup listing platform UI",
-    desc: "Modern UI with React + GSAP transition animations.",
-  },
-  {
-    id: 4,
-    imagePath: "/images/project4.png",
-    title: "TaskFlow",
-    shortDesc: "Task management SaaS UI",
-    desc: "Kanban board + drag and drop interactions.",
-  },
-  {
-    id: 5,
-    imagePath: "/images/project5.png",
-    title: "WebWatch",
-    shortDesc: "Track live website uptime",
-    desc: "Uptime monitoring & alerts UI.",
-  },
-];
 
 const isXL = () =>
   typeof window !== "undefined" ? window.innerWidth >= 1280 : true;
@@ -148,24 +110,30 @@ const ShowcaseSection = () => {
       });
 
       // Left card (current) - zig zag and fade out
-      tl.to(leftEl, {
-        keyframes: [
-          { x: 200, y: -150, duration: 0.22 }, // push to right-top
-          { x: -150, y: 0, duration: 0.28 }, // swing to left
-          { x: -200, y: 160, opacity: 0, duration: 0.3 }, // exit bottom-left and fade
-        ],
-      }, 0);
+      tl.to(
+        leftEl,
+        {
+          keyframes: [
+            { x: 200, y: -150, duration: 0.22 }, // push to right-top
+            { x: -150, y: 0, duration: 0.28 }, // swing to left
+            { x: -200, y: 160, opacity: 0, duration: 0.3 }, // exit bottom-left and fade
+          ],
+        },
+        0
+      );
 
       // Right-top moves to Left slot (entering)
       // Start it from a slightly top-right offset to mimic incoming motion
-      tl.fromTo(rtEl,
+      tl.fromTo(
+        rtEl,
         { x: 150, y: -100, opacity: 0 },
         { x: 0, y: 0, opacity: 1, duration: 0.6 },
         0.12
       );
 
       // Right-bottom moves up into Right-top
-      tl.fromTo(rbEl,
+      tl.fromTo(
+        rbEl,
         { x: 150, y: 120, opacity: 0 },
         { x: 0, y: 0, opacity: 1, duration: 0.52 },
         0.26
@@ -175,12 +143,12 @@ const ShowcaseSection = () => {
       // We'll create a temporary DOM clone to animate the incoming card from off-screen left -> into right-bottom slot.
       // To avoid DOM reordering complexity, animate the right-bottom slot itself after a short delay: first move it slightly left (off-screen) then bring in.
       // NOTE: actual content swap occurs onComplete, so we just animate rbEl quickly to give feel.
-      tl.fromTo(rbEl,
+      tl.fromTo(
+        rbEl,
         { x: -300, opacity: 0 },
         { x: 0, opacity: 1, duration: 0.45 },
         0.45
       );
-
     } else {
       // Mobile / < XL: simpler page-like slide (left card slides left, right-top becomes left, right-bottom becomes rightTop, new rightBottom slides in)
       const tl = gsap.timeline({
@@ -198,10 +166,20 @@ const ShowcaseSection = () => {
       tl.to(leftEl, { x: -300, opacity: 0, duration: 0.45 }, 0);
 
       // right-top -> left (slide left into place)
-      tl.fromTo(rtEl, { x: 200, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45 }, 0.12);
+      tl.fromTo(
+        rtEl,
+        { x: 200, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.45 },
+        0.12
+      );
 
       // right-bottom -> right-top
-      tl.fromTo(rbEl, { x: 200, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45 }, 0.22);
+      tl.fromTo(
+        rbEl,
+        { x: 200, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.45 },
+        0.22
+      );
     }
   };
 
@@ -239,27 +217,36 @@ const ShowcaseSection = () => {
       });
 
       // Current left moves toward right-top and exits to top-right then fade
-      tl.to(leftEl, {
-        keyframes: [
-          { x: -200, y: 150, duration: 0.22 }, // down-left
-          { x: 150, y: 0, duration: 0.28 }, // swing right
-          { x: 260, y: -160, opacity: 0, duration: 0.3 }, // exit top-right and fade
-        ],
-      }, 0);
+      tl.to(
+        leftEl,
+        {
+          keyframes: [
+            { x: -200, y: 150, duration: 0.22 }, // down-left
+            { x: 150, y: 0, duration: 0.28 }, // swing right
+            { x: 260, y: -160, opacity: 0, duration: 0.3 }, // exit top-right and fade
+          ],
+        },
+        0
+      );
 
       // Right-top moves to right-bottom
-      tl.fromTo(rtEl, { x: 0, y: 0, opacity: 1 }, { x: 0, y: 120, opacity: 1, duration: 0.45 }, 0.12);
+      tl.fromTo(
+        rtEl,
+        { x: 0, y: 0, opacity: 1 },
+        { x: 0, y: 120, opacity: 1, duration: 0.45 },
+        0.12
+      );
 
       // Right-bottom moves off-screen right (to make room)
       tl.to(rbEl, { x: 300, opacity: 0, duration: 0.45 }, 0.22);
 
       // Incoming previous card (nextLeft) should appear from right side into left slot
-      tl.fromTo(leftEl,
+      tl.fromTo(
+        leftEl,
         { x: 400, y: -100, opacity: 0 },
         { x: 0, y: 0, opacity: 1, duration: 0.55 },
         0.45
       );
-
     } else {
       // Mobile: simple slide-right action
       const tl = gsap.timeline({
@@ -277,10 +264,20 @@ const ShowcaseSection = () => {
       tl.to(leftEl, { x: 300, opacity: 0, duration: 0.45 }, 0);
 
       // rightTop -> rightBottom
-      tl.fromTo(rtEl, { x: -200, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45 }, 0.12);
+      tl.fromTo(
+        rtEl,
+        { x: -200, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.45 },
+        0.12
+      );
 
       // rightBottom -> left
-      tl.fromTo(rbEl, { x: -200, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45 }, 0.22);
+      tl.fromTo(
+        rbEl,
+        { x: -200, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.45 },
+        0.22
+      );
     }
   };
 
@@ -296,7 +293,14 @@ const ShowcaseSection = () => {
   // in case window resizes and user toggles between mobile/xl behaviour, we can clear transforms
   useEffect(() => {
     const onResize = () => {
-      gsap.set([cardLeftRef.current, cardRightTopRef.current, cardRightBottomRef.current], { clearProps: "all" });
+      gsap.set(
+        [
+          cardLeftRef.current,
+          cardRightTopRef.current,
+          cardRightBottomRef.current,
+        ],
+        { clearProps: "all" }
+      );
     };
     if (typeof window !== "undefined") {
       window.addEventListener("resize", onResize);
@@ -310,13 +314,27 @@ const ShowcaseSection = () => {
     if (!data) return null;
 
     return (
-      <div className={`card ${variant === "left" ? "first-project-wrapper" : "project"}`}>
+      <div
+        className={`card ${
+          variant === "left" ? "first-project-wrapper" : "project"
+        }`}
+      >
         <div className="image-wrapper">
           <img src={data.imagePath} alt={data.title} />
         </div>
         <div className="text-content">
-          <h2 className="">{data.title} {variant === "left" && <> - <span className="font-normal">{data.shortDesc}</span></>}</h2>
-          {variant === "left" && <p className="text-white-50 md:text-xl">{data.desc}</p>}
+          <h2 className="">
+            {data.title}{" "}
+            {variant === "left" && (
+              <>
+                {" "}
+                - <span className="font-normal">{data.shortDesc}</span>
+              </>
+            )}
+          </h2>
+          {variant === "left" && (
+            <p className="text-white-50 md:text-xl">{data.desc}</p>
+          )}
         </div>
       </div>
     );
@@ -329,11 +347,18 @@ const ShowcaseSection = () => {
           {/* Left  */}
           <div className="first-project-wrapper" ref={cardLeftRef}>
             <div className="image-wrapper bg-black">
-              <img src={showProjectOverView[leftIdx].imagePath} alt={showProjectOverView[leftIdx].title} className="object-fill px-5 md:px-10 xl:px-20" />
+              <img
+                src={showProjectOverView[leftIdx].imagePath}
+                alt={showProjectOverView[leftIdx].title}
+                className="object-contain px-5 md:px-10 xl:px-20"
+              />
             </div>
             <div className="text-content">
               <h2>
-                {showProjectOverView[leftIdx].title} - <span className="font-normal">{showProjectOverView[leftIdx].shortDesc}</span>
+                {showProjectOverView[leftIdx].title} -{" "}
+                <span className="font-normal">
+                  {showProjectOverView[leftIdx].shortDesc}
+                </span>
               </h2>
               <p className="text-white-50 md:text-xl">
                 {showProjectOverView[leftIdx].desc}
@@ -345,15 +370,31 @@ const ShowcaseSection = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={cardRightTopRef}>
               <div className="image-wrapper bg-[#ffefdb] ">
-                <img src={showProjectOverView[rightTopIdx].imagePath} alt={showProjectOverView[rightTopIdx].title} />
+                <img
+                  src={showProjectOverView[rightTopIdx].imagePath}
+                  alt={showProjectOverView[rightTopIdx].title}
+                />
               </div>
-              <h2>{showProjectOverView[rightTopIdx].title}</h2>
+              <h2>
+                {showProjectOverView[rightTopIdx].title} -{" "}
+                <span className="font-light">
+                  {showProjectOverView[rightTopIdx].shortDesc}
+                </span>
+              </h2>
             </div>
             <div className="project" ref={cardRightBottomRef}>
               <div className="image-wrapper bg-[#ffe7eb] ">
-                <img src={showProjectOverView[rightBottomIdx].imagePath} alt={showProjectOverView[rightBottomIdx].title} />
+                <img
+                  src={showProjectOverView[rightBottomIdx].imagePath}
+                  alt={showProjectOverView[rightBottomIdx].title}
+                />
               </div>
-              <h2>{showProjectOverView[rightBottomIdx].title}</h2>
+              <h2>
+                {showProjectOverView[rightBottomIdx].title} -{" "}
+                <span className="font-light">
+                  {showProjectOverView[rightBottomIdx].shortDesc}
+                </span>
+              </h2>
             </div>
           </div>
         </div>
