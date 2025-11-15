@@ -11,10 +11,6 @@ const navLinks = [
     name: "Skills",
     link: "#skills",
   },
-  {
-    name: "Testimonials",
-    link: "#testimonials",
-  },
 ];
 
 const words = [
@@ -147,39 +143,36 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    review: "Flutter is an open-source UI framework by Google used to build high-performance, cross-platform apps for Android, iOS, Web, Desktop, and Embedded devices using a single codebase. It uses the Dart programming language and provides a rich set of customizable widgets to create beautiful, native-like user interfaces.",
+    imgPath: "/images/logo/fluttertext.png",
+    logoPath: "/images/logo/flutter.png",
+    title: "Flutter Developer",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Cross-platform UI development <br> Builds beautiful, high-performance mobile apps for Android & iOS from a single codebase.",
+      "Fast development cycle <br> Uses Hot Reload, rich widget system, and strong UI customization for rapid iteration.",
+      "High performance <br> Compiles to native ARM code and provides near-native speed with smooth animations.",
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    review: "The MERN Stack is a full-stack JavaScript framework that uses MongoDB, Express.js, React.js, and Node.js to build modern web applications. It allows developers to create both frontend and backend using a single language—JavaScript. MERN is known for its speed, scalability, and ability to build interactive, real-time, and high-performance applications.",
+    imgPath: "/images/logo/nodetext.png",
+    logoPath: "/images/logo/node.png",
+    title: "MERN Stack Developer",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Full-stack JavaScript expertise <br> Works with MongoDB, Express.js, React, and Node.js to build complete web apps.",
+      "Scalable backend + interactive frontend <br> Capable of building REST APIs, real-time apps, and modern SPA interfaces.",
+      "End-to-end development <br> Handles database, server logic, frontend UI, authentication, deployment, and performance optimization.",
     ],
   },
   {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    review: "Django is a high-level, open-source Python web framework that helps developers build secure, scalable, and feature-rich web applications quickly. It follows the MVT (Model–View–Template) architecture and comes with many built-in tools that handle common tasks such as authentication, database management, URLs, forms, and security.",
+    imgPath: "/images/logo/djangotext.png",
+    logoPath: "/images/logo/django.png",
+    title: "Django Developer",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Rapid backend development <br> Uses Django’s built-in ORM, admin panel, and structure to build secure and scalable backend apps fast.",
+      "Security-focused <br> Protects apps using Django’s built-in security features (XSS, CSRF, SQL injection protection).",
+      "Clean, maintainable architecture <br> Follows MVT pattern, making projects modular, organized, and easier to scale.",
     ],
   },
 ];
@@ -199,50 +192,6 @@ const expLogos = [
   },
 ];
 
-const testimonials = [
-  {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
-    review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-    imgPath: "/images/client1.png",
-  },
-  {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
-    review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-    imgPath: "/images/client3.png",
-  },
-  {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
-    review:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    imgPath: "/images/client2.png",
-  },
-  {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
-    review:
-      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-    imgPath: "/images/client5.png",
-  },
-  {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
-    review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-    imgPath: "/images/client4.png",
-  },
-  {
-    name: "Albert Flores",
-    mentions: "@albertflores",
-    review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-    imgPath: "/images/client6.png",
-  },
-];
 
 const socialImgs = [
   {
@@ -250,8 +199,9 @@ const socialImgs = [
     imgPath: "/images/insta.png",
   },
   {
-    name: "fb",
-    imgPath: "/images/fb.png",
+    name: "github",
+    imgPath: "/images/github.png",
+    url: 'https://github.com/p-prince-n'
   },
   {
     name: "x",
@@ -313,6 +263,13 @@ const showProjectOverView = [
     shortDesc: "A Weather application build with flutter to Understand how Futurebuilder widget works ",
     desc: "A flutter application to understand how Futurebuilder widget works also uses openweathermap's free api to get current weather details.",
   },
+  {
+    id: 7,
+    imagePath: "/images/projectimages/singlist.png",
+    title: "Singlist",
+    shortDesc: "A NextJs Application, AI-powered modern stock market app.",
+    desc: "Track real-time prices, set personalized alerts, explore company insights, and manage watchlists. The admin dashboard allows managing stocks, publishing news, and monitoring user activity, while event-driven workflows power automated alerts/",
+  },
 ];
 
 export {
@@ -322,7 +279,6 @@ export {
   counterItems,
   expCards,
   expLogos,
-  testimonials,
   socialImgs,
   techStackIcons,
   techStackImgs,
